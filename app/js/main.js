@@ -14,5 +14,5 @@ function toggleActive(block, additionalBlock){
             block.classList.toggle('_active');
             additionalBlock && additionalBlock.classList.toggle('_active');
         })
-    };
+    }
 }
