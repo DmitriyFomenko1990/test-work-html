@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   background-color: #000000;
@@ -30,6 +33,7 @@ a {
   justify-content: space-between;
 
   &__logo {
+    box-sizing: initial;
     padding: 11px 15px;
     width: 45px;
     height: 34px;
@@ -68,7 +72,6 @@ a {
   padding: 16px 0 55px;
   text-align: center;
   margin: 0;
-  box-sizing: border-box;
   @media only screen and (min-width: 767px) {
         position: initial;
         flex-direction: row;
@@ -162,8 +165,8 @@ a {
 
 .advantages {
   text-align: center;
-  margin-bottom: 50px;
-
+  max-width: 730px;
+  margin: 0 auto 50px;
   &__head {
     font-family: 'Play', sans-serif;
     font-style: normal;
@@ -171,11 +174,12 @@ a {
     font-size: 26px;
     line-height: 36px;
     margin: 0;
-    padding: 10px 35px;
+    padding: 0 35px;
   }
 
   &__description {
-    padding: 7px 4px 10px;
+    margin: 20px auto 0;
+    padding: 0 6px;
     font-style: normal;
     font-weight: normal;
   }
@@ -217,7 +221,7 @@ a {
 
   &__image {
     cursor: pointer;
-    margin: 0 auto 27px;
+    margin: 0 auto 28px;
     width: 160px;
     height: 90px;
 
@@ -271,8 +275,8 @@ a {
   }
 
   &__description {
+    margin-top: 12px ;
     text-align: left;
-    padding: 7px 0 9px;
   }
 }
 
@@ -297,7 +301,6 @@ a {
   &:hover {
     background-color: #000000;
     border: 2px solid #77B900;
-    box-sizing: border-box;
     box-shadow: 0 0 10px #77B900;
   }
 
@@ -336,7 +339,6 @@ a {
 
 .modal {
   position: relative;
-  box-sizing: border-box;
   width: 95%;
   padding: 71px 10px;
   background: #000000;
@@ -394,7 +396,6 @@ a {
     font-size: 16px;
     line-height: 28px;
     padding: 0 0 0 20px;
-    box-sizing: border-box;
     @media only screen and (min-width: 570px) {
       width: 100%;
     }
