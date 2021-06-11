@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 
 function cleanDist() {
-    return del('dist')
+    return del('docs')
 }
 
 function images() {
@@ -24,7 +24,7 @@ function images() {
             ]
         })
     ]))
-    .pipe(dest('dist/img'))
+    .pipe(dest('docs/img'))
 }
 
 function browsersync() {
