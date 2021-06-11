@@ -3,16 +3,17 @@ const bodyMenu = document.querySelector(".menu_js");
 toggleActive(burgerIcon, bodyMenu);
 
 const glasses = document.querySelectorAll(".js-control");
-const modalWindow = document.querySelector(".modal-wrapper");
-glasses.forEach(block => toggleActive(block, modalWindow));
+const modalWrapper = document.querySelector(".modal-wrapper_js");
+glasses.forEach(block => toggleActive(block, modalWrapper));
 const modalCross = document.querySelector(".cross_js");
-toggleActive(modalCross, modalWindow);
+toggleActive(modalCross, modalWrapper);
+toggleActive(modalWrapper);
 
 function toggleActive(block, additionalBlock){
-    if (block){
-        block.addEventListener('click', function (e){
-            block.classList.toggle('_active');
-            additionalBlock && additionalBlock.classList.toggle('_active');
+        block && block.addEventListener('click', function (e){
+            if (e.target.isSameNode(block)) {
+                block.classList.toggle('_active');
+                additionalBlock && additionalBlock.classList.toggle('_active');
+            }
         })
-    }
 }
